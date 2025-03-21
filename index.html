@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pebble Flow - Redefining RV Travel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom Styles for Animations and Parallax -->
+    <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.95);
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+      }
+      .animate-bounce {
+        animation: bounce 0.3s ease;
+      }
+
+      /* Parallax Effect */
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* Fallback for devices that don't support background-attachment: fixed */
+      @media (max-width: 768px) {
+        .parallax {
+          background-attachment: scroll;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav
+      class="bg-gray-800 py-4 px-6 flex items-center justify-between fixed w-full top-0 z-10"
+    >
+      <div class="text-2xl font-bold text-green-500">Pebble Flow</div>
+      <div class="hidden md:flex space-x-6">
+        <a
+          href="#home"
+          class="hover:text-green-500 transition-colors duration-300"
+          >Home</a
+        >
+        <a
+          href="#features"
+          class="hover:text-green-500 transition-colors duration-300"
+          >Features</a
+        >
+        <a
+          href="#about"
+          class="hover:text-green-500 transition-colors duration-300"
+          >About</a
+        >
+        <a
+          href="#gallery"
+          class="hover:text-green-500 transition-colors duration-300"
+          >Gallery</a
+        >
+        <a
+          href="#video"
+          class="hover:text-green-500 transition-colors duration-300"
+          >Video</a
+        >
+        <a
+          href="#testimonials"
+          class="hover:text-green-500 transition-colors duration-300"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          class="hover:text-green-500 transition-colors duration-300"
+          >Contact</a
+        >
+      </div>
+      <button class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center bg-cover bg-center parallax"
+      style="
+        background-image: url('https://pebblelife.com/_next/image?url=https%3A%2F%2Fassets.pebblelife.com%2Fproduct_foreground_961ba661cf.png&w=1920&q=75');
+      "
+    >
+      <div class="text-center animate-fadeIn">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">
+          Redefining RV Travel
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-6">
+          Experience the future with Pebble Flow – an all-electric travel
+          trailer designed for modern explorers.
+        </p>
+        <a
+          href="#contact"
+          class="inline-block bg-green-500 text-gray-900 py-3 px-6 rounded-full font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105 animate-bounce"
+          >Discover Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 animate-fadeIn">
+        Why Pebble Flow?
+      </h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg text-center transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+        >
+          <i class="fas fa-bolt text-green-500 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">All-Electric Power</h3>
+          <p class="text-gray-400">
+            Sustainable travel with zero emissions, powered by advanced battery
+            technology.
+          </p>
+        </div>
+        <!-- Feature 2 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg text-center transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+          style="animation-delay: 0.2s"
+        >
+          <i class="fas fa-mobile-alt text-green-500 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Smart Control</h3>
+          <p class="text-gray-400">
+            Control your RV with an iPhone-like experience via our intuitive
+            app.
+          </p>
+        </div>
+        <!-- Feature 3 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg text-center transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+          style="animation-delay: 0.4s"
+        >
+          <i class="fas fa-mountain text-green-500 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Built for Adventure</h3>
+          <p class="text-gray-400">
+            Designed to take you anywhere, from mountains to deserts, in style
+            and comfort.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-gray-800">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6 animate-fadeIn">Our Mission</h2>
+        <p
+          class="text-lg text-gray-300 mb-8 animate-fadeIn"
+          style="animation-delay: 0.2s"
+        >
+          At Pebble Flow, we’re reimagining RV travel for the modern era. Our
+          all-electric travel trailers combine cutting-edge technology with
+          sustainable design, empowering you to explore the world without
+          limits.
+        </p>
+        <div class="flex justify-center">
+          <img
+            src="https://pebblelife.com/_next/image?url=https%3A%2F%2Fassets.pebblelife.com%2FPebble_15_cf1921c4a6.jpg&w=3840&q=75"
+            class="rounded-lg shadow-lg w-full max-w-md animate-fadeIn"
+            style="animation-delay: 0.4s"
+            alt="Team Working"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 animate-fadeIn">
+        Explore Pebble Flow
+      </h2>
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <div
+          class="relative overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+        >
+          <img
+            src="https://pebblelife.com/_next/image?url=https%3A%2F%2Fassets.pebblelife.com%2FPebble_7_V2_58a6360bfb.jpg&w=3840&q=75"
+            class="w-full h-64 object-cover"
+            alt="Trailer Exterior"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white font-semibold">Sleek Exterior Design</p>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+          style="animation-delay: 0.2s"
+        >
+          <img
+            src="https://pebblelife.com/_next/image?url=https%3A%2F%2Fassets.pebblelife.com%2FPebble_21_ef9cc7c1c0.jpg&w=3840&q=75"
+            class="w-full h-64 object-cover"
+            alt="Trailer Interior"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white font-semibold">Modern Interior Comfort</p>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+          style="animation-delay: 0.4s"
+        >
+          <img
+            src="https://pebblelife.com/_next/image?url=https%3A%2F%2Fassets.pebblelife.com%2FSky_No_Awning_001_c18a593a8a.png&w=1920&q=75"
+            class="w-full h-64 object-cover"
+            alt="Trailer Camping"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white font-semibold">Camping in Style</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-16 px-6 bg-gray-800">
+      <h2 class="text-4xl font-bold text-center mb-12 animate-fadeIn">
+        Pebble Flow in Action
+      </h2>
+      <div class="max-w-4xl mx-auto">
+        <div
+          class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg animate-fadeIn"
+          style="animation-delay: 0.2s"
+        >
+          <iframe
+            width="924"
+            height="520"
+            src="https://www.youtube.com/embed/dDGlntFdt4Y"
+            title="Pebble Flow | The Next-Generation of All-Electric RVing"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="text-center text-gray-300 mt-6">
+          Watch how the Pebble Flow transforms RV travel with its innovative
+          design and technology.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 animate-fadeIn">
+        What Our Customers Say
+      </h2>
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div
+          class="bg-gray-700 p-6 rounded-lg transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+        >
+          <p class="text-gray-300 mb-4">
+            "The Pebble Flow has transformed our family trips. It’s
+            eco-friendly, easy to use, and the smart features are a
+            game-changer!"
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://via.placeholder.com/40"
+              class="w-10 h-10 rounded-full mr-3"
+              alt="User Avatar"
+            />
+            <div>
+              <p class="text-white font-semibold">Sarah M.</p>
+              <p class="text-gray-400 text-sm">Adventurer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div
+          class="bg-gray-700 p-6 rounded-lg transform transition-transform duration-300 hover:scale-105 animate-fadeIn"
+          style="animation-delay: 0.2s"
+        >
+          <p class="text-gray-300 mb-4">
+            "I love how seamless the Pebble Flow integrates with my lifestyle.
+            It’s the future of RVing!"
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://via.placeholder.com/40"
+              class="w-10 h-10 rounded-full mr-3"
+              alt="User Avatar"
+            />
+            <div>
+              <p class="text-white font-semibold">James T.</p>
+              <p class="text-gray-400 text-sm">Tech Enthusiast</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section id="contact" class="py-16 px-6 bg-gray-800 text-center">
+      <h2 class="text-4xl font-bold mb-4 animate-fadeIn">Ready to Explore?</h2>
+      <p
+        class="text-lg text-gray-300 mb-8 animate-fadeIn"
+        style="animation-delay: 0.2s"
+      >
+        Join the future of RVing with Pebble Flow. Contact us to learn more!
+      </p>
+      <form
+        class="max-w-lg mx-auto animate-fadeIn"
+        style="animation-delay: 0.4s"
+      >
+        <div class="mb-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:border-green-500 transition-all duration-300"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:border-green-500 transition-all duration-300"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <textarea
+            placeholder="Your Message"
+            rows="4"
+            class="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:border-green-500 transition-all duration-300"
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-green-500 text-gray-900 py-3 px-6 rounded-full font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105 animate-bounce"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6 px-6 text-center">
+      <p class="text-gray-400">© 2025 Pebble Flow. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a
+          href="https://facebook.com"
+          class="text-green-500 hover:text-green-400 transition-colors duration-300"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://twitter.com"
+          class="text-green-500 hover:text-green-400 transition-colors duration-300"
+          ><i class="fab fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://instagram.com"
+          class="text-green-500 hover:text-green-400 transition-colors duration-300"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Navbar Toggle (Mobile) -->
+    <script>
+      document.querySelector(".md\\:hidden").addEventListener("click", () => {
+        const navLinks = document.querySelector(".md\\:flex");
+        navLinks.classList.toggle("hidden");
+      });
+
+      // Button Click Animation
+      document.querySelectorAll('button[type="submit"]').forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent form submission for demo
+          btn.classList.add("animate-bounce");
+          alert("Message sent! (This is a demo)");
+        });
+      });
+
+      document.querySelectorAll('a[href="#contact"]').forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.classList.add("animate-bounce");
+        });
+      });
+    </script>
+  </body>
+</html>
